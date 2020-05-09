@@ -500,8 +500,8 @@
         [(render-docstring (:doc ns-data))
          (render-refer-clojure (:refer-clojure ns-data))
          (render-gen-class opts (:gen-class ns-data))
-         (render-requires opts :require (:require ns-data))
          (render-requires opts :require-macros (:require-macros ns-data))
+         (render-requires opts :require (:require ns-data))
          (render-imports opts (:import ns-data))
          (render-reader-conditionals opts (:reader-conditionals ns-data))]))))
 
