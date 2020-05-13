@@ -41,10 +41,6 @@ $(uberjar_path): project.clj resources/**/* src/**/*
 	lein uberjar
 
 cljstyle: $(uberjar_path)
-	# Ensure Graal is available
-	ifndef GRAAL_HOME
-	$(error GRAAL_HOME is not set)
-	endif
 	# Build native image
 	$(GRAAL_HOME)/bin/native-image \
 	    --no-fallback \
